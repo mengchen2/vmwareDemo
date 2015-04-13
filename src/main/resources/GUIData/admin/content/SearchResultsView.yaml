@@ -1,0 +1,28 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "Skillport Admin"
+elements:
+  searchTextField:
+    locators:
+      english: "css=.searchForText"
+  searchButton:
+    locators:
+      english: "css=#Search button"
+  coursesContainer:
+    locators:
+      english: "css=#search-membership-idcourse_bin div[class*='-scroller'] div[class*='-body']"
+    containerElements:
+      courseLabel:
+        locators:
+          english: "css=div[class*='-row']"
+      courseShowDetailLink:
+        locators:
+          english: "css=div[class*='-row'] .operation_link"
+      viewCatalogLink:
+        locators:
+          english: "css=div[class*='-row'] .viewcataloglink"
+pageValidators: [
+  searchTextField,
+  searchButton
+]

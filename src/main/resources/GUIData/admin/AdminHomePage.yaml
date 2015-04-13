@@ -1,0 +1,11 @@
+baseClass: "com.symbio.skillsoft.admin.AdminBasePage"
+defaultLocale: "english"
+pageTitle:
+  english: "Skillport Admin"
+elements:
+  createNewUserLink:
+    locators:
+      english: "css=a[href*='usermenubar']"
+pageValidators: [
+  createNewUserLink
+]

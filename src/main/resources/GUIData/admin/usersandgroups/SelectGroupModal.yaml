@@ -1,0 +1,31 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "Select Groups"
+elements:
+  searchGroupNameTextField:
+    locators:
+      english: "id=searchforGroupWin"
+  searchOrgCodeTextField:
+    locators:
+      english: "id=searchforOrgCodeWin"
+  searchButton:
+    locators:
+      english: "css=#searchPopBtnWin button"
+  groupContainer:
+    locators:
+      english: "css=#search-result-popWin-view div[class*='-scroller'] div[class*='-body'] div[class*='-row']"
+    containerElements:
+      groupNameLabel:
+        locators:
+          english: "css=div[class*='-col-2']"
+  okButton:
+    locators:
+      english: "css=#ok_button button"
+  cancelButton:
+    locators:
+      english: "css=#cancel_button button"
+pageValidators: [
+  searchGroupNameTextField,
+  searchButton
+]

@@ -1,0 +1,42 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  skillsoftLogoLink:
+    locators:
+      english: "id=logo"
+  headerContainer:
+    locators:
+      english: "id=logoutContainer"
+    containerElements:
+      profileLink:
+        locators:
+          english: "id=myaccount_topLink"
+      logOutLink:
+        locators:
+          english: "id=logout_topLink"
+      helpLink:
+        locators:
+          english: "id=help_topLink"          
+      searchTextField:
+        locators:
+          english: "id=preSearchbox"
+      searchLink:
+        locators:
+          english: "id=headerSearchIcon"
+  menuContainer:
+    locators:
+      english: "id=HeaderContextLinks"
+    containerElements:
+      quickLinksLink:
+        locators:
+          english: "id=quicklinks"
+      learningPlanLink:
+        locators:
+          english: "id=learningplan"
+  quickLinksContainer:
+    locators:
+      english: "css=.quicklinks-identifier"
+    containerElements:
+      adminLink:
+        locators:
+          english: "css=a[aria-label*='Admin']"

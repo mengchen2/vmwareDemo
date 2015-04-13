@@ -1,0 +1,30 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "SkillPort Learning Portal Search"
+elements:
+  coursesContainer:
+    locators:
+      english: "css=#bin_course .s-assetContainer"
+    containerElements:
+      detailsLink:
+        locators:
+          english: "css=.s-links .assetDetailsLink"
+      launchLink:
+        locators:
+          english: "css=.s-links .launchAsset"
+      MoreActionsLink:
+        locators:
+          english: "css=.s-links .actionMenu"
+  enrollLink:
+    locators:
+      english: "css=a[aria-label*='Enroll']"
+  saveLink:
+    locators:
+      english: "css=a[aria-label*='Save']"
+  yesLink:
+    locators:
+      english: "//span[contains(text(),'Yes')]"
+pageValidators: [
+  coursesContainer
+]

@@ -1,0 +1,24 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "Save To My Learning Plan"
+elements:
+  titleLabel:
+    locators:
+      english: "id=asset_title"
+  noteTextField:
+    locators:
+      english: "id=addToLearningPlanNote-inputEl"
+  saveLink:
+    locators:
+      english: "css=a[id*='saveLearningPlan']"
+  okLink:
+    locators:
+      english: "//span[contains(text(),'OK')]"
+  xCloseLink:
+    locators:
+      english: "css=.s-close"
+pageValidators: [
+  titleLabel,
+  saveLink
+]

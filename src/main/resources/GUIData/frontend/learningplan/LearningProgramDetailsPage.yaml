@@ -1,0 +1,15 @@
+baseClass: "com.symbio.skillsoft.FrontendBasePage"
+defaultLocale: "english"
+pageTitle:
+  english: "SkillPort Learning Portal Learning Plan"
+elements:
+  enrollmentStatusLabel:
+    locators:
+      english: "id=enrollmentStatus"
+  backLink:
+    locators:
+      english: "id=backView"
+pageValidators: [
+  enrollmentStatusLabel,
+  backLink
+]

@@ -1,0 +1,14 @@
+baseClass: "com.symbio.skillsoft.FrontendBasePage"
+defaultLocale: "english"
+pageTitle:
+  english: "SkillPort Learning Portal Search"
+elements:
+  refineLink:
+    locators:
+      english: "id=atg_global"
+  coursesLink:
+    locators:
+      english: "id=binCount_course"
+pageValidators: [
+  refineLink
+]

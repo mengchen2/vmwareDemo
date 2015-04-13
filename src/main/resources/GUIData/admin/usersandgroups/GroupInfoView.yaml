@@ -1,0 +1,31 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "Skillport Admin"
+elements:
+  titleLabel:
+    locators:
+      english: "css=.selectiontext"
+  groupInfoTabLink:
+    locators:
+      english: "css=#myTPanel__group_info_nav_tab .x-tab-right"
+  editLink:
+    locators:
+      english: "id=secondRowTabs_groupedit"
+  deactivateLink:
+    locators:
+      english: "id=secondRowTabs_groupdeactivate"
+  deleteLink:
+    locators:
+      english: "id=secondRowTabs_groupdelete"
+  forcePasswordchangeLink:
+    locators:
+      english: "id=secondRowTabs_groupforcepwdchange"
+  groupInformationContainer:
+    locators:
+      english: "css=#tabcontentpage table.textverdana tr"
+pageValidators: [
+  titleLabel,
+  editLink,
+  groupInformationContainer
+]

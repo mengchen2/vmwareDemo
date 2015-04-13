@@ -1,0 +1,71 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "New User"
+elements:
+  statusActivatedRadioButton:
+    locators:
+      english: "id=active"
+  statusDeactivatedRadioButton:
+    locators:
+      english: "id=inactive"
+  usernameTextField:
+    locators:
+      english: "id=_sys_userid"
+  passwordTextField:
+    locators:
+      english: "id=_sys_password"
+  verifyPasswordTextField:
+    locators:
+      english: "id=verify_sys_password"
+  forcePasswordChangeCheckBox:
+    locators:
+      english: "id=force_change"
+  firstNameTextField:
+    locators:
+      english: "id=_sys_firstname"
+  lastNameTextField:
+    locators:
+      english: "id=_sys_lastname"
+  emailAddressTextField:
+    locators:
+      english: "id=_sys_emailaddress"
+  displayFirstNameTextField:
+    locators:
+      english: "id=_sys_display_first_name"
+  displayLastNameTextField:
+    locators:
+      english: "id=_sys_display_last_name"
+  locationTextField:
+    locators:
+      english: "id=_sys_location"
+  editGroupMembershipLink:
+    locators:
+      english: "id=groupMemberShipEditId"
+  roleSelectList:
+    locators:
+      english: "id=userRoleSelector"
+  customizeLink:
+    locators:
+      english: "id=userLink"
+  editApprovalManagerLink:
+    locators:
+      english: "id=approvalManagerEditId"
+  sendWelcomeEmailCheckBox:
+    locators:
+      english: "id=sendWelcomeEmail"
+  saveAndAddAnotherButton:
+    locators:
+      english: "css=#saveAndAddAnotherBtn button"
+  saveButton:
+    locators:
+      english: "css=#saveBtn button"
+  cancelButton:
+    locators:
+      english: "css=#cancelUserBtn button"
+pageValidators: [
+  usernameTextField,
+  firstNameTextField,
+  roleSelectList,
+  saveButton
+]
