@@ -18,13 +18,13 @@ elements:
           english: "css=.s-links .actionMenu"
   enrollLink:
     locators:
-      english: "css=a[aria-label*='Enroll']"
+      english: "css=a[id*='MoreActions-enroll']"
   saveLink:
     locators:
       english: "css=a[aria-label*='Save']"
   yesLink:
     locators:
-      english: "//span[contains(text(),'Yes')]"
+      english: "//span[contains(text(),'Yes')]|//span[contains(text(),'Si')]"
 pageValidators: [
   coursesContainer
 ]

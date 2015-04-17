@@ -1,0 +1,30 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+pageTitle:
+  english: "Skillport Admin"
+elements:
+  closeManagementLink:
+    locators:
+      english: "css=a[href*='top.close']"
+  helpLink:
+    locators:
+      english: "css=a[href*='helpme']"
+  uninstalledCoursesSelectList:
+    locators:
+      english: "name=uninstalled_course"
+  installCourseButton:
+    locators:
+      english: "name=cbutton0"
+  repeatUninstallCourseButton:
+    locators:
+      english: "name=cbutton1"
+  activeCoursesSelectList:
+    locators:
+      english: "name=active_course"
+  uninstalledCoursesContainer:
+    locators:
+      english: "css=select[name='uninstalled_course'] option"
+pageValidators: [
+  closeManagementLink,
+  uninstalledCoursesSelectList
+]

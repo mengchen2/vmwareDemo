@@ -1,7 +1,14 @@
 package com.symbio.skillsoft.learner;
 
+import java.io.IOException;
+
 import com.paypal.selion.annotations.WebTest;
 import com.paypal.selion.platform.asserts.SeLionAsserts;
+import com.paypal.selion.platform.dataprovider.FileSystemResource;
+import com.paypal.selion.platform.dataprovider.YamlDataProvider;
+import com.paypal.selion.platform.dataprovider.YamlDataProviderException;
+import com.paypal.selion.platform.grid.Grid;
+import com.symbio.skillsoft.dataobjects.UserInformation;
 import com.symbio.skillsoft.frontend.HomePage;
 import com.symbio.skillsoft.frontend.learningplan.LearningProgramDetailsPage;
 import com.symbio.skillsoft.frontend.learningplan.SaveToMyLearningPlanModal;
@@ -12,13 +19,20 @@ import com.symbio.skillsoft.helpers.LoginHelper;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class EnrollLearningProgramTest {
 
-    @Test
-    @WebTest(browser = "*firefox")
-    public void test() {
+	@DataProvider(parallel=true, name="EnrollLearningProgram")
+	public Object[][] simpleDataProvider() throws YamlDataProviderException, IOException{
+		return YamlDataProvider.getAllData(
+				new FileSystemResource("src/test/resources/testdata/EnrollLearningProgram.yaml"));
+	}
+	
+    @WebTest
+    @Test(dataProvider = "EnrollLearningProgram")
+    public void enrollLearningProgramTest(UserInformation data) {
         
         // Define user parameters
         String username = "user" + (int)(Math.random()*1000000);
@@ -36,15 +50,21 @@ public class EnrollLearningProgramTest {
         SaveToMyLearningPlanModal saveToMyLearningPlanModal = new SaveToMyLearningPlanModal();
         LearningProgramDetailsPage learningProgramDetailsPage = new LearningProgramDetailsPage();
         
+        // Delete cookies before starting the case
+        Grid.driver().manage().deleteAllCookies();
+        
         // Login on skillsoft home page and go to Admin
         LoginHelper.navigateToAdmin();
-        
+
         // Create a user
         AccountHelper.create(username, password, groupname, role);
         
         // Create a learning program
         LearningProgramHelper.create(lpname, course);
         
+        // Change the language (if needed)
+        LoginHelper.changeLanguage(username, password, data.getLanguage());
+                
         // Login with the learner
         LoginHelper.login(username, password);
           
@@ -66,6 +86,7 @@ public class EnrollLearningProgramTest {
         
         // Check the learning program details and enrollment status
         courseView.getCoursesContainer().getDetailsLink().click(learningProgramDetailsPage);
-        SeLionAsserts.assertTrue(learningProgramDetailsPage.getEnrollmentStatusLabel().getText().contains("Enrolled"));
+        SeLionAsserts.assertTrue(learningProgramDetailsPage.getEnrollmentStatusLabel().getText().contains("Enrolled")
+        		|| learningProgramDetailsPage.getEnrollmentStatusLabel().getText().contains("Iscritto"));
     }
 }

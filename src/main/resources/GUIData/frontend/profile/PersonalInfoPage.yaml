@@ -1,0 +1,21 @@
+baseClass: "com.symbio.skillsoft.frontend.FrontendBasePage"
+defaultLocale: "english"
+pageTitle:
+  english: "SkillPort Learning Whats New"
+elements:
+  profileFormLabel:
+    locators:
+      english: "id=profile_form"
+  myNotesLink:
+    locators:
+      english: "id=account_notes"
+  languagesLink:
+    locators:
+      english: "id=preferences_languages"
+  securityLink:
+    locators:
+      english: "id=preferences_security"
+pageValidators: [
+  profileFormLabel,
+  languagesLink
+]

@@ -27,6 +27,9 @@ elements:
     locators:
       english: "id=HeaderContextLinks"
     containerElements:
+      whatsNewLink:
+        locators:
+          english: "id=whatshappening"
       quickLinksLink:
         locators:
           english: "id=quicklinks"

@@ -14,7 +14,7 @@ elements:
       english: "id=login_submit"
   registerLink:
     locators:
-      english: "register_link"
+      english: "id=register_link"
 pageValidators: [
   userNameTextField,
   passwordTextField,

@@ -20,7 +20,7 @@ public class LearningProgramHelper {
         
         // Navigate to 'Manage Learning Programs'
         adminHomePage.getContentLink().click(ExpectedConditions.presenceOfElementLocated(By.xpath(adminHomePage.getContentContainer().getLocator())));
-        adminHomePage.getContentContainer().getLearningProgramsLink().click(learningProgramsPage);
+        adminHomePage.getContentContainer(3).getLearningProgramsLink().click(learningProgramsPage);
 
         // Create a new Learning Program
         learningProgramsPage.getNewLearningProgramButton().click(newLearningProgramModal);

@@ -11,14 +11,14 @@ elements:
       english: "css=#Search button"
   coursesContainer:
     locators:
-      english: "css=#search-membership-idcourse_bin div[class*='-scroller'] div[class*='-body']"
+      english: "css=#search-membership-idcourse_bin .x-grid3-body"
     containerElements:
       courseLabel:
         locators:
-          english: "css=div[class*='-row']"
+          english: "css=.x-grid3-row"
       courseShowDetailLink:
         locators:
-          english: "css=div[class*='-row'] .operation_link"
+          english: "css=.x-grid3-row .operation_link"
       viewCatalogLink:
         locators:
           english: "css=div[class*='-row'] .viewcataloglink"

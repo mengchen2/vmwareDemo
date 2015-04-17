@@ -19,8 +19,11 @@ elements:
       english: "id=Content"
   contentContainer:
     locators:
-      english: "css=div[style*='262px'].x-menu"
+      english: "css=div[style*='262px'].x-menu ul li"
     containerElements:
+      contentInstallerLink:
+        locators:
+          english: "css=a[href='#']"
       learningProgramsLink:
         locators:
           english: "css=a[href*='lpmanagement.action']"

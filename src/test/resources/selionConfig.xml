@@ -15,6 +15,7 @@
     <parameter name="browser" value="*firefox" />
     <!-- optional, defaults to false. This can also be specified via the JVM argument -DSELION_SELENIUM_RUN_LOCALLY=true -->
     <parameter name="runLocally" value="true" />
+    <!-- <parameter name="customCapabilities" value="com.symbio.test.LanguageCapabilitiesBuilder"></parameter> -->
     
     <parameter name="hostname" value="qatest1vsp80eb.qa.skillport.com" />
 </suite>
