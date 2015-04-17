@@ -34,6 +34,15 @@ public class EnrollLearningProgramTest {
     @Test(dataProvider = "EnrollLearningProgram")
     public void enrollLearningProgramTest(UserInformation data) {
         
+        // Initialize page objects
+        HomePage homePage = new HomePage();
+        SearchResultsCoursesView courseView = new SearchResultsCoursesView();
+        SaveToMyLearningPlanModal saveToMyLearningPlanModal = new SaveToMyLearningPlanModal();
+        LearningProgramDetailsPage learningProgramDetailsPage = new LearningProgramDetailsPage();
+        
+        // Delete cookies before starting the case
+        Grid.driver().manage().deleteAllCookies();
+        
         // Define user parameters
         String username = "user" + (int)(Math.random()*1000000);
         String password = "$kill$0ft";
@@ -43,15 +52,6 @@ public class EnrollLearningProgramTest {
         // Define learning program
         String lpname = "program" + (int)(Math.random()*1000000);
         String course = "COMM0101";
-        
-        // Initialize page objects
-        HomePage homePage = new HomePage();
-        SearchResultsCoursesView courseView = new SearchResultsCoursesView();
-        SaveToMyLearningPlanModal saveToMyLearningPlanModal = new SaveToMyLearningPlanModal();
-        LearningProgramDetailsPage learningProgramDetailsPage = new LearningProgramDetailsPage();
-        
-        // Delete cookies before starting the case
-        Grid.driver().manage().deleteAllCookies();
         
         // Login on skillsoft home page and go to Admin
         LoginHelper.navigateToAdmin();

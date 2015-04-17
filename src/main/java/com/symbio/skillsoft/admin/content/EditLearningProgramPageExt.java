@@ -25,6 +25,13 @@ public class EditLearningProgramPageExt extends EditLearningProgramPage {
         
     	SearchResultsView resultsView = new SearchResultsView();
     	
+        // Wait a bit more for the tree to be completely loaded
+        try {
+			Thread.sleep(5*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+        
         // Search for a course
         getSearchTextField().type(text);
         getSearchButton().click(ExpectedConditions.presenceOfElementLocated(By.cssSelector(resultsView.getCoursesContainer().getLocator())));
