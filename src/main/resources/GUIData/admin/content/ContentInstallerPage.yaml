@@ -9,7 +9,7 @@ elements:
   helpLink:
     locators:
       english: "css=a[href*='helpme']"
-  uninstalledCoursesSelectList:
+  uninstalledCoursesLargeList:
     locators:
       english: "name=uninstalled_course"
   installCourseButton:
@@ -21,9 +21,6 @@ elements:
   activeCoursesSelectList:
     locators:
       english: "name=active_course"
-  uninstalledCoursesContainer:
-    locators:
-      english: "css=select[name='uninstalled_course'] option"
 pageValidators: [
   closeManagementLink,
   uninstalledCoursesSelectList

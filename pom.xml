@@ -79,6 +79,9 @@
                 </executions>
                 <configuration>
                     <basePackage>com.symbio.skillsoft</basePackage>
+                    <customElements>
+                    	<customElement>com.symbio.skillsoft.elements.LargeList</customElement>
+                    </customElements>
                 </configuration>
             </plugin>
             <plugin>

@@ -14,7 +14,7 @@ public class CreateGroupTest {
         
         // Randomize a group name to create
         String groupname = "group-" + (int)(Math.random()*1000000);
-        String parent = "testLP";
+        String parent = "SkillSoft";
         
         // Login on skillsoft home page and go to Admin
         LoginHelper.navigateToAdmin();

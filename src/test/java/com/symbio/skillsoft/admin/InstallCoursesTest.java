@@ -8,11 +8,14 @@ import com.paypal.selion.platform.grid.Grid;
 import com.paypal.selion.platform.utilities.WebDriverWaitUtils;
 import com.paypal.selion.reports.runtime.WebReporter;
 import com.symbio.skillsoft.admin.content.ContentInstallerPage;
+import com.symbio.skillsoft.elements.LargeList;
 import com.symbio.skillsoft.helpers.AccountHelper;
 import com.symbio.skillsoft.helpers.LoginHelper;
 import com.thoughtworks.selenium.Wait;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -56,7 +59,7 @@ public class InstallCoursesTest {
         
         Grid.driver().switchTo().frame("mainframe");
         Grid.driver().switchTo().frame("c");
-        WebDriverWaitUtils.waitUntilElementIsPresent(contentInstallerPage.getUninstalledCoursesSelectList().getLocator());
+        WebDriverWaitUtils.waitUntilElementIsPresent(contentInstallerPage.getUninstalledCoursesLargeList().getLocator());
         WebReporter.log(Grid.driver().getTitle(), true, true);
         
         
@@ -75,26 +78,25 @@ public class InstallCoursesTest {
         	throw new Exception("No courses found");
         }
         
-        // Select one course to install
-        //String[] indexes = {"0","1","2","3","4","5","6","7","8","9"};
-        //System.out.println("lenght : " + contentInstallerPage.getUninstalledCoursesSelectList().getContentValue().length);
-        //contentInstallerPage.getUninstalledCoursesSelectList().selectByIndex(indexes);
+        int range = 50;
+        Actions actions = new Actions(Grid.driver());
+        
         while (nb > 0){
         
-        	if (nb > 50){
-		        for (int i=0; i<50; i++){
-		        	contentInstallerPage.getUninstalledCoursesContainer(i).clickonly();
-		        }
+        	LargeList ll = new LargeList(contentInstallerPage.getUninstalledCoursesLargeList().getLocator());
+        	if (nb > range){
+        		
+        		
+        		ll.selectByRange(range);
         	}else{
-		        for (int i=0; i<(nb-1); i++){
-		        	contentInstallerPage.getUninstalledCoursesContainer(i).clickonly();
-		        }
+        		
+        		ll.selectByRange(nb);
         	}
 	        contentInstallerPage.getInstallCourseButton().clickonly();
         
 	        // Confirm the javascript alert
 	        Grid.driver().switchTo().alert().accept();
-	        WebDriverWaitUtils.waitUntilElementIsPresent(contentInstallerPage.getUninstalledCoursesSelectList().getLocator());
+	        WebDriverWaitUtils.waitUntilElementIsPresent(contentInstallerPage.getUninstalledCoursesLargeList().getLocator());
 	        
 	        input = Grid.driver().getPageSource();
 	        matcher = pattern.matcher(input);

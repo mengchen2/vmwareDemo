@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" verbose="1" name="SeLion Test" skipfailedinvocationcounts="false" junit="false" parallel="false"
-    data-provider-thread-count="1" annotations="JDK">
+<suite thread-count="2" verbose="1" name="SeLion Test" skipfailedinvocationcounts="false" junit="false" parallel="false"
+    data-provider-thread-count="2" annotations="JDK">
 
     <!-- IMPORTANT Use this file as your global TestNG Template XML file for Eclipse when running TestNG tests. 
          See src/test/resources/README.html for further information. -->
