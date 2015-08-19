@@ -1,0 +1,20 @@
+#pageName:  vmware : my : en : group : home
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  buyOnlineLink:
+    locators:
+      english: "css=a.link.bluetext[href*='myvmworkstationbuy']"
+  storeButton:
+    locators:
+      english: "css=a[href*='store']"
+  playerBuyLink:
+    locators:
+      english: "css=a.link.bluetext[href*='myvmplayerbuych']"
+  popUpButton:
+    locators:
+      english: "css=.fsrDeclineButton"
+pageValidators: [
+  storeButton,
+  buyOnlineLink
+]

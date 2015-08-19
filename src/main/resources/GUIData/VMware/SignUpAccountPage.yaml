@@ -1,0 +1,84 @@
+#pageName:  vmware : my : en : web : vmware : registration
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  emailAddressTextField:
+    locators:
+      english: "css=input#txt_email"
+  verifyEmailAddressTextField:
+    locators:
+      english: "css=input#txt_verify_email"
+  passwordTextField:
+    locators:
+      english: "css=input#password"
+  verifyPasswordTextField:
+    locators:
+      english: "css=input#txt_verify_password"
+  firstNameTextField:
+    locators:
+      english: "css=input#txt_firstName"
+  lastNameTextField:
+    locators:
+      english: "css=input#txt_lastName"
+  isVMwarePartnerRadioButton:
+    locators:
+      english: "css=#vmware_partner_yes"
+  notVMwarePartnerRadioButton:
+    locators:
+      english: "css=#vmware_partner_no"
+  departmentSelectList:
+    locators:
+      english: "css=select#sel_department"
+  jobRoleSelectList:
+    locators:
+      english: "css=select#sel_jobRole"
+  businessPhoneTextField:
+    locators:
+      english: "css=input#txt_work_phone" 
+  extensionTextField:
+    locators:
+      english: "css=input#txt_work_phone_ext"
+  emailLanguagePreferenceSelectList:
+    locators:
+      english: "css=select#prefLanguage"
+  companyOrOrganizationTextField:
+    locators:
+      english: "css=input#txt_company"
+  industrySelectList:
+    locators:
+      english: "css=select#sel_industry"
+  address1TextField:
+    locators:
+      english: "css=input#txt_address1"
+  address2TextField:
+    locators:
+      english: "css=input#txt_addresss2"
+  cityTextField:
+    locators:
+      english: "css=input#txt_city"
+  zipOrPostalCodeTextField:
+    locators:
+      english: "css=input#txt_zip_postal_code"
+  countrySelectList:
+    locators:
+      english: "css=select#country"
+  preferredCommunityUsernameTextField:
+    locators:
+      english: "css=input#txt_communityUsername"
+  isWishToJoinVMwareCommunitiesCheckBox:
+    locators:
+      english: "css=#join_communities"
+  agreeToMyVMwareTermsOfUseAgreementCheckBox:
+    locators:
+      english: "css=#terms_use"
+  understandVMwarePrivacyPolicyCheckBox:
+    locators:
+      english: "css=#subscribe"
+  continueButton:
+    locators:
+      english: "css=div.ctrlHolder.buttons.clearfix button.button.primary"
+  cancelButton:
+    locators:
+      english: "css=button#regCancel"
+   
+   

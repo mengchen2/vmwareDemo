@@ -1,0 +1,17 @@
+#pageName:  vmwcn: store: quickbuy cart
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  stateLargeList:
+    locators:
+      english: "css=#billingState"
+  checkoutButton:
+    locators:
+      english: "css=#checkoutButton"
+  quantityTextField:
+    locators:
+      english: "css=.dr_qtyInput"
+pageValidators: [
+  stateLargeList
+]
+

@@ -1,0 +1,23 @@
+#pageName:  vmware : my : en : web : vmware : login
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  chooseLanguageSelectList:
+    locators:
+      english: "css=a.locale-selector"
+  loginButton:
+    locators:
+      english: "css=#button-login"
+  loginUsernameTextField:
+    locators:
+      english: "css=input#username"
+  loginPasswordTextField:
+    locators:
+      english: "css=input#password"
+  signUpButton:
+      locators:
+        english: "css=a[href*='registration']"
+pageValidators: [
+  chooseLanguageSelectList,
+  loginButton
+]

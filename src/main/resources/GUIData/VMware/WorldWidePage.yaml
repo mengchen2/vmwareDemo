@@ -1,0 +1,14 @@
+#pageName:  vmware : worldwide.html
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  usLink:
+    locators:
+      english: "css=#us"
+  cnLink:
+    locators:
+      english: "css=#cn"
+pageValidators: [
+  cnLink
+]
+

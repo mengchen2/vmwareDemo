@@ -1,0 +1,16 @@
+#pageName:  vmwcn: store: confirm order
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  acceptedCheckBox:
+    locators:
+      english: "css=#tosAccepted"
+  submitButton:
+    locators:
+      english: "css=#submitBottom" 
+  shoppingButton:
+    locators:
+      english: "css=#Shopping"
+pageValidators: [
+  submitButton
+]

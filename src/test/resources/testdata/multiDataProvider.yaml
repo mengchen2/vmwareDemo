@@ -1,0 +1,14 @@
+---
+priority: p0
+testcaseid: "testcaseid1"
+locale: "zh_cn"
+user: "miao.ma@symbio.com"
+password: "Mamiao1995"
+state: "天津"
+---
+priority: p1
+testcaseid: "testcaseid2"
+locale: "en_us"
+user: "kama@paypalcorp.com"
+password: "Mamiao1995"
+state: "河北"

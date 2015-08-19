@@ -1,0 +1,22 @@
+#pageName:  vmwcn:store:product details:VMware Workstation 11
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "english"
+elements:
+  updatedRadioButton:
+    locators:
+      english: "css=#group-310139000-0-0"
+  updateToWorkstationOrplayer6PlusRadioButton:
+    locators:
+      english: "css=#group-310139000-0-5"
+  updateToPlayer7ProRadioButton:
+    locators:
+      english: "css=#group-310139000-0-10"
+  quantityTextField:
+    locators:
+      english: "css=.quantity"
+  buyNowButton:
+    locators:
+      english: "css=.dr_prodSummary #buyNowButton"
+pageValidators: [
+  buyNowButton
+]

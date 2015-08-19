@@ -1,10 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.symbio.skillsoft</groupId>
-    <artifactId>SkillSoft</artifactId>
+    <groupId>com.symbio.vmware</groupId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>SkillSoft</name>
+    <name>vmware</name>
     <packaging>jar</packaging>
     <description>A new SeLion project.</description>
 
@@ -13,10 +12,20 @@
         <maven.compiler.target>1.7</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>false</skipTests>
-        <suiteXmlFile>src/test/resources/SampleSuite.xml</suiteXmlFile>
+        <suiteXmlFile>C:\workspace\vmware\src\test\resources\selionConfig.xml</suiteXmlFile>
     </properties>
 
     <dependencies>
+        <dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-server</artifactId>
+		<version>2.46.0</version>
+		</dependency>
+		<dependency>
+		<groupId>com.paypal.selion</groupId>
+		<artifactId>SeLion-Grid</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		</dependency>
         <dependency>
             <groupId>com.paypal.selion</groupId>
             <artifactId>SeLion</artifactId>
@@ -79,9 +88,6 @@
                 </executions>
                 <configuration>
                     <basePackage>com.symbio.skillsoft</basePackage>
-                    <customElements>
-                    	<customElement>com.symbio.skillsoft.elements.LargeList</customElement>
-                    </customElements>
                 </configuration>
             </plugin>
             <plugin>
@@ -203,4 +209,5 @@
             </plugins>
         </pluginManagement>
     </build>
+    <artifactId>vmware</artifactId>
 </project>
